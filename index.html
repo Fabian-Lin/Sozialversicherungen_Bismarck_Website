@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bismarcks Sozialversicherungen – einfach erklärt</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;800&family=Source+Sans+3:wght@400;600&display=swap">
+  <style>
+    :root {
+      box-sizing: border-box;
+      --bg: #EDF0F3;
+      --panel: #FFFFFF;
+      --ink: #101B2A;
+      --muted: #4A5769;
+      --blue: #1D3F72;
+      --ochre: #9A6F12;
+      --line: #C3CBD6;
+      --head: "Bitter", Georgia, serif;
+      --body: "Source Sans 3", system-ui, Arial, sans-serif;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    @media (prefers-color-scheme:dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0E1622;
+        --panel: #16202F;
+        --ink: #E6EBF2;
+        --muted: #A4B0C2;
+        --blue: #8FB0E6;
+        --ochre: #E0B04A;
+        --line: #2C3B52
+      }
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #0E1622;
+      --panel: #16202F;
+      --ink: #E6EBF2;
+      --muted: #A4B0C2;
+      --blue: #8FB0E6;
+      --ochre: #E0B04A;
+      --line: #2C3B52
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: env(safe-area-inset-top, 0px)
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 1.05rem/1.6 var(--body)
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--head);
+      line-height: 1.15;
+      margin: 0 0 .6em
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3.6rem);
+      font-weight: 800;
+      max-width: 18ch
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      font-weight: 800
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 500
+    }
+
+    p {
+      max-width: 65ch;
+      margin: 0 0 1em
+    }
+
+    a {
+      color: var(--blue)
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--ochre);
+      outline-offset: 3px
+    }
+
+    main,
+    header,
+    footer {
+      max-width: 60rem;
+      margin: 0 auto;
+      padding: 0 1.25rem
+    }
+
+    section {
+      padding: 3rem 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .hero {
+      padding: 3.5rem 0 2.5rem
+    }
+
+    .lead {
+      font-size: 1.2rem;
+      color: var(--muted)
+    }
+
+    .years {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: .75rem;
+      margin-top: 2rem
+    }
+
+    .years a {
+      display: block;
+      text-decoration: none;
+      color: var(--ink);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-top: 6px solid var(--blue);
+      padding: .8rem 1rem
+    }
+
+    .years b {
+      display: block;
+      font: 800 clamp(1.6rem, 5vw, 2.6rem)/1 var(--head);
+      color: var(--blue)
+    }
+
+    .years span {
+      font-size: .95rem;
+      color: var(--muted)
+    }
+
+    .years a:hover {
+      border-top-color: var(--ochre)
+    }
+
+    .tl {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 1.2rem;
+      border-left: 4px solid var(--blue)
+    }
+
+    .tl li {
+      margin: 0 0 .8rem
+    }
+
+    details {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: .7rem 1rem
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600
+    }
+
+    summary b {
+      font-family: var(--head);
+      color: var(--blue);
+      margin-right: .6rem
+    }
+
+    details p {
+      margin: .6rem 0 0
+    }
+
+    .tabs {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem
+    }
+
+    .tabs button {
+      font: 600 1rem var(--body);
+      color: var(--ink);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: .6rem 1rem;
+      cursor: pointer;
+      border-radius: 4px
+    }
+
+    .tabs button[aria-selected="true"] {
+      background: var(--blue);
+      color: var(--bg);
+      border-color: var(--blue)
+    }
+
+    .pane {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 1.25rem
+    }
+
+    .pane[hidden] {
+      display: none
+    }
+
+    dl {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: .4rem 1.2rem;
+      margin: 0
+    }
+
+    dt {
+      font-weight: 600;
+      color: var(--muted)
+    }
+
+    dd {
+      margin: 0
+    }
+
+    .todo {
+      border: 2px dashed var(--ochre);
+      padding: 1rem;
+      color: var(--muted)
+    }
+
+    footer {
+      padding-top: 2rem;
+      padding-bottom: 3rem;
+      color: var(--muted);
+      font-size: .95rem
+    }
+
+    @media (max-width:34rem) {
+      .years {
+        grid-template-columns: 1fr 1fr
+      }
+
+      dl {
+        grid-template-columns: 1fr
+      }
+    }
+    .quellen {
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 0.4em;
+    }
+
+    .quellen a {
+      color: inherit;          /* Link bleibt grau */
+      text-decoration: underline;
+    }
+
+    .zitat {
+      margin: .8rem 0 .4rem;
+      padding: .2rem 0 .2rem 1rem;
+      border-left: 4px solid var(--ochre);
+      color: var(--muted);
+      font-style: italic;
+      max-width: 65ch;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header class="hero">
+    <h1>Warum zahlte Bismarck für die Arbeiter?</h1>
+    <p class="lead">Kaiserreich, 1880er: Der Staat verbietet die Sozialdemokratie – und baut zugleich die erste
+      staatliche Sozialversicherung der Welt auf. Diese Seite erklärt, wie das zusammenpasst.</p>
+    <nav class="years" aria-label="Schnellzugriff">
+      <a href="#zeit"><b>1881</b><span>Kaiserliche Botschaft</span></a>
+      <a href="#saeulen"><b>1883</b><span>Krankenversicherung</span></a>
+      <a href="#saeulen"><b>1884</b><span>Unfallversicherung</span></a>
+      <a href="#saeulen"><b>1889</b><span>Alter &amp; Invalidität</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="zeit">
+      <h2>Der Weg dorthin</h2>
+      <p>Klicke auf ein Ereignis, um mehr zu lesen.</p>
+      <ul class="tl">
+        <li>
+          <details>
+            <summary><b>1878</b>Sozialistengesetz</summary>
+            <p>
+              Das Sozialistengesetz von 1878 war ein Ausnahmegesetz, mit dem Bismarck die Sozialdemokratie bekämpfen wollte. 
+              Nach zwei gescheiterten Attentaten auf Kaiser Wilhelm I. Im Jahr 1878 machte er die Sozialistische Arbeiterpartei dafür verantwortlich, 
+              obwohl es keine Beweise gab. Im Oktober 1878 beschloss der Reichstag das ”Gesetz gegen die gemeingefährlichen Bestrebungen der Sozialdemokratie”. 
+              Es verbot sozialdemokratische Vereine, Versammlungen, Druckschriften und Gewerkschaften, 
+              und führende Mitglieder konnten aus ihren Wohnorten ausgewiesen werden. Nur die Teilnahme and Reichstagswahlen blieb erlaubt. 
+              Sein Ziel erreichte das Gesetz nicht: Die Partei arbeitete im Untergrund weiter, und die Verfolgung stärkte ihren Zusammenhalt, 
+              sodass sie bei Wahlen sogar dreimal so viele Stimmen gewann. Bismarck setzte deshalb zusätzlich auf ”Zuckerbrot und Peitsche”. 
+              Neben der Unterdrückung (Peitsche) sollte die Sozialversicherung (Zuckerbrot) die Arbeiter auf den Staat binden und vom Sozialismus abbringen. 
+              Das Sozialistengesetz lief 1890 aus.
+            </p>
+            <p class="quellen">
+              Quelle: <a href="https://www.dhm.de/lemo/kapitel/kaiserreich/innenpolitik/sozialistengesetz ">
+                Deutsches Historisches Museum: Das Sozialistengesetz</a>
+            </p>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary><b>1881</b>Kaiserliche Botschaft</summary>
+            <p>Im Herbst 1881 arbeitete Bismarck ein sozialpolitisches Programm aus, das Kaiser Wilhelm I. 
+              Im Reichstag vortragen sollte. Der Kaiser weigerte sich, weil Bismarck zu dieser Zeit erwog, 
+              das 1878 erlassene Sozialistengesetz wieder aufzuheben. Deshalb hielt Bismarck die Rede am 17. November 1881 selbst. 
+              Er machte darin deutlich, dass man die sozialen Missstände nicht allein durch Verbote und Verfolgung der Sozialdemokraten beheben könne, 
+              sondern dass der Staat auch aktiv das Wohl der Arbeiter fördern müsse. Sein Konzept sah drei Arten von Sozialversicherung vor, 
+              dazu das Prinzip der Selbstverwaltung. Ein Gesetz war die Botschaft noch nicht, sie bildete aber die Grundlage für die Krankenversicherung (1883), 
+              die Unfallversicherung (1884) und die Invaliditäts- und Altersversicherung (1889).  
+            </p>
+            <blockquote class="zitat">
+              „Die Ziele, welche der kaiserlichen Politik vorschweben, sind durch die Kaiserliche Botschaft gekennzeichnet. 
+              Es handelt sich nun aber um die Wege, auf welchen sie zu erreichen sind, und die Wahl dieser Wege ist gleich wichtig wie die Festlegung des Zieles überhaupt, 
+              denn jeder Weg kann ein richtiger Weg sein, er kann auch ein Irrweg sein. Ich muß sagen: 
+              Ich selbst bin meiner Überzeugung über die Wahl der Wege - über die Ziele bin ich mir ganz klar - 
+              aber der Wahl der Wege bin ich so unbedingt sicher nicht, daß ich Ihnen heute mit Bestimmtheit amtliche Andeutungen über das machen könnte, 
+              was ich hoffe etwa im Monat April dem Reichstage vorlegen zu können auf diesem Gebiete.“
+              <br>
+              Rede des Reichskanzlers Otto Fürst von Bismarck im Deutschen Reichstag Januar 1882
+              <p class="quellen">
+              <a href="https://www.quellen-sozialpolitik-kaiserreich.de/fileadmin/user_upload/PDFs_der_Baende/QuellensammlungAbt2Band2Teil1.pdf">
+              Quellensammlung zur Geschichte der deutschen Sozialpolitik 1867 bis 1914 Abt. 2, Band 2, Teil 1, Seite 184f</a>
+            </p>
+            </blockquote>
+            <p class="quellen">
+              Quellen: <a href="https://www.bismarck-biografie.de/politik/bismarcks-sozialgesetzgebung-1881-1890 ">
+              Bismarck-Biografie: Bismarcks Sozialgesetzgebung 1881-1890</a>
+              <a href="https://de.wikipedia.org/wiki/Kaiserliche_Botschaft0 ">Wikipedia: Kaiserliche Botschaft</a>
+                
+            </p>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary><b>1883–1889</b>Drei Gesetze</summary>
+            <p>Kranken-, Unfall- und Rentenversicherung entstehen nacheinander (siehe unten).</p>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary><b>1890</b>Ende einer Ära</summary>
+            <p>Das Sozialistengesetz läuft aus, Bismarck tritt zurück.</p>
+          </details>
+        </li>
+        <li>
+          <div class="todo">[Hier eigene Ergänzung: Bild, Quelle oder Karikatur zur Zeit]</div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="saeulen">
+      <h2>Die drei Säulen</h2>
+      <div class="tabs" role="tablist" aria-label="Versicherungen">
+        <button role="tab" id="t0" aria-selected="true" aria-controls="p0">Krankenversicherung</button>
+        <button role="tab" id="t1" aria-selected="false" aria-controls="p1">Unfallversicherung</button>
+        <button role="tab" id="t2" aria-selected="false" aria-controls="p2">Rentenversicherung</button>
+      </div>
+      <div class="pane" role="tabpanel" id="p0" aria-labelledby="t0">
+        <h3>Gesetz von 1883</h3>
+        <dl>
+          <dt>Wer war versichert? / Betroffene</dt>
+          <dd>Arbeiter ohne Familienangehörige (seit 1900 einbezogen), ausgenommen Land- und Forstarbeiter</dd>
+
+          <dt>Wer zahlte? / Beitragszahler</dt>
+          <dd>Arbeitnehmer zwei Drittel, Arbeitgeber ein Drittel</dd>
+
+          <dt>Was bekam man? / Leistungen</dt>
+          <dd>freie ärztliche Behandlung, Medikamente, Krankengeld in höhe der Hälfte des ortsüblichen Tageslohnes bei Erwerbsunfähigkeit</dd>
+
+          <dt>Dauer</dt>
+          <dd>Krankengeld für bis zu 13 Wochen</dd>
+
+          <dt>Träger</dt>
+          <dd>Die Ortskrankenkassen</dd>
+        </dl>
+
+        <figcaption class="quellen" style="text-align: right;">
+          <br>
+          <a href="https://de.wikisource.org/wiki/Gesetz,_betreffend_die_Krankenversicherung_der_Arbeiter">
+          Wikisource: Gesetz, betreffend die Krankenversicherung der Arbeiter</a>    
+        </figcaption>
+
+      </div>
+      <div class="pane" role="tabpanel" id="p1" aria-labelledby="t1" hidden>
+        <h3>Gesetz von 1884</h3>
+        <dl>
+          <dt>Wer war versichert? / Betroffene</dt>
+          <dd>Arbeiter in gefährlichen Betrieben</dd>
+
+          <dt>Wer zahlte? / Beitragszahler</dt>
+          <dd>Allein die Arbeitgeber, organisiert in Berufsgenossenschaften</dd>
+
+          <dt>Was bekam man? / Leistungen</dt>
+          <dd>Kosten für ein Heilverfahren, Rente für Dauer einer Erwerbsunfähigkeit, Rente in Höhe von 2/3 des Verdienstes bei Verlust der Erwerbsfähigkeit, bei Tod Hilfe für die Hinterbliebenen</dd>
+
+          <dt>Dauer</dt>
+          <dd>Heilverfahren und Rente ab 14. Woche</dd>
+
+          <dt>Träger</dt>
+          <dd>Die Berufsgenossenschaften, gegliedert nach Gewerbegruppen</dd>
+        </dl>
+        <figcaption class="quellen" style="text-align: right;">
+          <br>
+          <a href="https://de.wikisource.org/wiki/Unfallversicherungsgesetz">
+          Wikisource: Gesetz, betreffend die Unfallversicherung der Arbeiter</a>    
+        </figcaption>
+      </div>
+      <div class="pane" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+        <h3>Gesetz von 1889</h3>
+        <dl>
+          <dt>Wer war versichert? / Betroffene</dt>
+          <dd>Arbeiter und Angestellte bis 2000 Mark Verdienst jährlich, Familienangehörige nicht mit einbezogen</dd>
+
+          <dt>Wer zahlte? / Beitragszahler</dt>
+          <dd>Arbeitnehmer und Arbeitgeber je zur Hälfte, dazu ein Zuschuss von 50 Mark jährlich pro Rente vom Staat</dd>
+
+          <dt>Was bekam man? / Leistungen</dt>
+          <dd>Invalidenrente bei Erwerbsunfähigkeit von mindestens einem Jahr auf Dauer der Unfähigkeit, Altersrente ab 70 Jahren (Lohnklasse 1: 106 Mark jährlich, Lohnklasse 4: 191 Mark jährlich)</dd>
+
+          <dt>Träger</dt>
+          <dd>Die Landesversicherungsanstalten</dd>
+        </dl>
+        <figcaption class="quellen" style="text-align: right;">
+          <br>
+          <a href="https://de.wikisource.org/wiki/Gesetz,_betreffend_die_Invalidit%C3%A4ts-_und_Altersversicherung">
+          Wikisource: Gesetz, betreffend die Versicherung der Arbeiter gegen die Folgen von Alter und Invalidität</a>
+        </figcaption>
+      </div>
+      <figure>
+        <figcaption class="quellen">
+          Quellen: Miriam Köhler: Übersicht Bismarcks Sozialversicherungen;
+          Reichgesetzblätter 1883, 1884, 1889;
+          <a href="https://de.wikisource.org/wiki/Reichsgesetzblatt_(Deutschland)">Wikisource: Reichsgesetzblatt</a>;
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="motive">
+      <h2>Warum tat Bismarck das?</h2>
+      <p>Häufig heißt es: Zuckerbrot und Peitsche. Das Verbot sollte die Arbeiterbewegung schwächen, die Versicherungen
+        sollten Arbeiter enger an den Staat binden.</p>
+      <div class="todo">[Hier eigene Ergänzung: weitere Motive, z. B. soziale Not, Konkurrenz zur SPD,
+        Staatsverständnis]</div>
+    </section>
+
+    <section id="bewertung">
+      <h2>Erfolg oder Kalkül?</h2>
+      <div class="todo">[Hier eigene Ergänzung: Bewertung, Folgen für später, evtl. kleines Quiz zum Selbsttest]</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Quellen: [Schulbuch, Seiten, weitere Quellen hier eintragen]</p>
+  </footer>
+
+  <script>
+    (function () {
+      var tabs = document.querySelectorAll('[role="tab"]');
+      function show(i) {
+        tabs.forEach(function (t, k) {
+          var on = k === i;
+          t.setAttribute('aria-selected', on);
+          document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+        });
+      }
+      tabs.forEach(function (t, k) {
+        t.addEventListener('click', function () { show(k) });
+        t.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowRight') { show((k + 1) % tabs.length); tabs[(k + 1) % tabs.length].focus() }
+          if (e.key === 'ArrowLeft') { show((k + tabs.length - 1) % tabs.length); tabs[(k + tabs.length - 1) % tabs.length].focus() }
+        });
+      });
+    })();
+  </script>
+</body>
+
+</html>
