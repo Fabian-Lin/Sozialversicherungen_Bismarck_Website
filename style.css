@@ -253,6 +253,7 @@
       dl {
         grid-template-columns: 1fr
       }
+      .hero-bild { order: -1; }
     }
     .quellen {
       font-size: 0.8rem;
