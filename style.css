@@ -273,3 +273,32 @@
       font-style: italic;
       max-width: 65ch;
     }
+
+    .hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      }
+
+      .hero-text {
+        flex: 1 1 22rem;   /* nimmt den Platz links, bricht bei Platzmangel um */
+      }
+
+      .hero-bild {
+        flex: 0 0 auto;
+        margin: 0;
+        width: 12rem;
+      }
+
+      .hero-bild img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border: 1px solid var(--line);
+      }
+
+      img {
+        max-width: 100%;
+      }
