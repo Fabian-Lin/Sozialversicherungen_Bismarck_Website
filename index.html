@@ -20,9 +20,8 @@
     </div>
 
     <figure class="hero-bild">
-      <img src="bilder/image.png"
-           alt="Porträtfoto von Otto von Bismarck"
-           width="300" height="400">
+       <img src="bilder/image.png"
+         alt="Porträtfoto von Otto von Bismarck">
       <figcaption class="quellen">
         Foto: <a href="https://commons.wikimedia.org/wiki/File:Franz_von_Lenbach_Bismarck_1894.jpg">Franz von Lenbach</a>, Public domain, via Wikimedia Commons
       </figcaption>
@@ -45,7 +44,7 @@
             <button class="timeline-button" onclick="toggleDetails(this)">Mehr erfahren</button>
             <div class="timeline-details hidden">
               <p>Nach zwei Attentaten auf Kaiser Wilhelm I. nutzte Bismarck die Angst vor der Sozialdemokratie, um das Gesetz durchzusetzen. Es scheiterte jedoch in seinem Hauptziel: die SPD wurde stärker.</p>
-              <p class="quellen">Quelle: <a href="https://www.dhm.de/lemo/kapitel/kaiserreich/innenpolitik/sozialistengesetz">DHM: Sozialistengesetz</a></p>
+              
             </div>
           </div>
         </div>
@@ -61,7 +60,7 @@
               <blockquote>
                 "Die Heilung der sozialen Schäden kann nicht ausschließlich im Wege der Repression sozialdemokratischer Ausschreitungen gesucht werden, sondern nur gefunden werden in der positiven Förderung des Wohles der Arbeiter."
               </blockquote>
-              <p class="quellen">Quelle: <a href="https://www.quellen-sozialpolitik-kaiserreich.de/fileadmin/user_upload/PDFs_der_Baende/QuellensammlungAbt2Band2Teil1.pdf">Quellensammlung Sozialpolitik</a></p>
+              
             </div>
           </div>
         </div>
@@ -105,17 +104,7 @@
               Sozialistengesetz lief 1890 aus.
             </p>
 
-            <div class="quellen">
-              <span class="quellen-label">Quelle</span>
-              <a
-                href="https://www.dhm.de/lemo/kapitel/kaiserreich/innenpolitik/sozialistengesetz"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Quelle: Deutsches Historisches Museum: Das Sozialistengesetz
-                
-              </a>
-            </div>
+            
           </div>
         </details>
       </li>
@@ -253,21 +242,27 @@
           Wikisource: Gesetz, betreffend die Versicherung der Arbeiter gegen die Folgen von Alter und Invalidität</a>
         </figcaption>
       </div>
-      <figure>
-        <figcaption class="quellen">
-          Quellen: Miriam Köhler: Übersicht Bismarcks Sozialversicherungen;
-          Reichgesetzblätter 1883, 1884, 1889;
-          <a href="https://de.wikisource.org/wiki/Reichsgesetzblatt_(Deutschland)">Wikisource: Reichsgesetzblatt</a>;
-        </figcaption>
-      </figure>
+      
     </section>
 
     <section id="motive">
       <h2>Warum tat Bismarck das?</h2>
-      <p>Häufig heißt es: Zuckerbrot und Peitsche. Das Verbot sollte die Arbeiterbewegung schwächen, die Versicherungen
-        sollten Arbeiter enger an den Staat binden.</p>
-      <div class="todo">[Hier eigene Ergänzung: weitere Motive, z. B. soziale Not, Konkurrenz zur SPD,
-        Staatsverständnis]</div>
+      <div class="motive-grid">
+        
+
+        <figure class="motive-figure">
+          <div class="motive-title">Karikatur von Bismarck mit Peitsche und dem deutschen Michel in der Prager Zeitschrift Humoristické listy (1878)</div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Karikatur_Bismarck_und_Michel_%281878%29.png" alt="Karikatur: Bismarck und Michel (1878)" loading="lazy">
+          <figcaption class="motive-caption">
+            <span class="motive-source">Von N.N. - Humoristické Listy 7.12.1878, CC BY-SA 4.0, <a href="https://commons.wikimedia.org/w/index.php?curid=112443363">commons.wikimedia.org</a></span>
+          </figcaption>
+        </figure>
+        <div class="motive-text">
+          <p>Häufig heißt es: Zuckerbrot und Peitsche. Bismarcks Sozialversicherungen hatten mehrere miteinander verwobene Ziele: sie sollten soziale Not lindern, das Vertrauen der Arbeiter in den Staat stärken und gleichzeitig die Attraktivität sozialistischer Ideen reduzieren.</p>
+          <p>Praktisch kombinierte die Politik wirtschaftliche, politische und ideologische Motive: Durch Versicherungsleistungen wurden Arbeiter materiell abgesichert, gleichzeitig festigte der Staat seine Rolle als Garant von Ordnung und Wohlfahrt. Ökonomisch ging es auch darum, produktive Arbeitskräfte zu erhalten und Kosten durch Prävention zu senken.</p>
+          <p>Kurz: Die Reformen waren weniger reine Wohltätigkeit als ein Kalkül zwischen sozialer Stabilisierung und politischer Integration.</p>
+        </div>
+      </div>
     </section>
 
     <section id="bewertung">
@@ -277,11 +272,6 @@
 
     <section id="vergleich" class="comparison-section">
       <h2>Sozialversicherungen: Damals und heute</h2>
-      <p>Wie haben sich Bismarcks Reformen bis heute entwickelt?</p>
-
-      <div class="comparison-controls">
-        <button id="toggle-era">Zeige Vergleich mit 2026</button>
-      </div>
 
       <table id="comparison-table">
         <thead>
@@ -404,37 +394,16 @@
       </div>
     </section>
 
-    <section id="infografik" class="infografik-section">
-      <h2>Infografik: Die Krankenversicherung 1883</h2>
-      <p>Wie wurde die erste Sozialversicherung finanziert und wer profitierte davon?</p>
-
-      <div class="infografik-container">
-        <div class="infografik-item">
-          <div class="infografik-circle">Arbeiter</div>
-          <div class="infografik-line"></div>
-          <div class="infografik-amount">2/3 des Beitrags</div>
-        </div>
-        <div class="infografik-item">
-          <div class="infografik-circle">Arbeitgeber</div>
-          <div class="infografik-line"></div>
-          <div class="infografik-amount">1/3 des Beitrags</div>
-        </div>
-        <div class="infografik-item">
-          <div class="infografik-circle">Staat</div>
-          <div class="infografik-amount">Zuschuss</div>
-        </div>
-      </div>
-
-      <div class="infografik-explanation">
-        <p>Die Krankenversicherung wurde zu zwei Dritteln vom Arbeiter und zu einem Drittel vom Arbeitgeber finanziert. Der Staat steuerte einen kleinen Zuschuss bei.</p>
-        <p class="quellen">Quelle: <a href="https://www.bpb.de/geschichte/deutsche-geschichte/kaiserreich/135909/sozialgesetzgebung">Bundeszentrale für politische Bildung</a></p>
-      </div>
-    </section>
-
   </main>
 
   <footer>
-    <p>Quellen: [Schulbuch, Seiten, weitere Quellen hier eintragen]</p>
+    <h4>Quellen</h4>
+    <ul>
+      <li>Deutsches Historisches Museum: <a href="https://www.dhm.de/lemo/kapitel/kaiserreich/innenpolitik/sozialistengesetz">Das Sozialistengesetz</a></li>
+      <li>Quellensammlung Sozialpolitik: <a href="https://www.quellen-sozialpolitik-kaiserreich.de/fileadmin/user_upload/PDFs_der_Baende/QuellensammlungAbt2Band2Teil1.pdf">QuellensammlungAbt2Band2Teil1.pdf</a></li>
+      <li>Miriam Köhler: Übersicht Bismarcks Sozialversicherungen</li>
+      <li>Reichsgesetzblätter 1883, 1884, 1889; <a href="https://de.wikisource.org/wiki/Reichsgesetzblatt_(Deutschland)">Wikisource: Reichsgesetzblatt</a></li>
+    </ul>
   </footer>
 
   <script src="script.js"></script>
