@@ -321,14 +321,14 @@
       <p>Wie gut kennst du Bismarcks Sozialpolitik? Beantworte die Fragen und prüfe deine Antworten.</p>
 
       <div class="quiz-container">
-        <div class="quiz-question">
+        <div class="quiz-question" data-correct="b">
           <h3>Frage 1: Warum führte Bismarck die Sozialversicherungen ein?</h3>
           <div class="quiz-options">
             <label>
               <input type="radio" name="frage1" value="a"> Aus reiner Nächstenliebe
             </label>
             <label>
-              <input type="radio" name="frage1" value="b"> Um die Arbeiterklasse zu beruhigen und die Sozialdemokratie zu schwächen ✅
+              <input type="radio" name="frage1" value="b"> Um die Arbeiterklasse zu beruhigen und die Sozialdemokratie zu schwächen
             </label>
             <label>
               <input type="radio" name="frage1" value="c"> Weil die Kirche es forderte
@@ -336,14 +336,14 @@
           </div>
         </div>
 
-        <div class="quiz-question">
-          <h3>Frage 2: Welche Versicherung wurde ZUERST eingeführt?</h3>
+        <div class="quiz-question" data-correct="b">
+          <h3>Frage 2: Welche Versicherung wurde zuerst eingeführt?</h3>
           <div class="quiz-options">
             <label>
               <input type="radio" name="frage2" value="a"> Rentenversicherung
             </label>
             <label>
-              <input type="radio" name="frage2" value="b"> Krankenversicherung ✅
+              <input type="radio" name="frage2" value="b"> Krankenversicherung
             </label>
             <label>
               <input type="radio" name="frage2" value="c"> Unfallversicherung
@@ -351,7 +351,55 @@
           </div>
         </div>
 
-        <button id="quiz-submit" class="quiz-button">Ergebnis anzeigen</button>
+        <div class="quiz-question" data-correct="c">
+          <h3>Frage 3: Welche der folgenden Aussagen trifft auf die Unfallversicherung von 1884 zu?</h3>
+          <div class="quiz-options">
+            <label>
+              <input type="radio" name="frage3" value="a"> Sie wurde komplett vom Staat finanziert
+            </label>
+            <label>
+              <input type="radio" name="frage3" value="b"> Arbeitnehmer zahlten den größten Teil
+            </label>
+            <label>
+              <input type="radio" name="frage3" value="c"> Die Arbeitgeber zahlten und trugen die Organisation
+            </label>
+          </div>
+        </div>
+
+        <div class="quiz-question" data-correct="a">
+          <h3>Frage 4: Wann endete das Sozialistengesetz ursprünglich?</h3>
+          <div class="quiz-options">
+            <label>
+              <input type="radio" name="frage4" value="a"> 1890
+            </label>
+            <label>
+              <input type="radio" name="frage4" value="b"> 1883
+            </label>
+            <label>
+              <input type="radio" name="frage4" value="c"> 1900
+            </label>
+          </div>
+        </div>
+
+        <div class="quiz-question" data-correct="c">
+          <h3>Frage 5: Welche Leistung war nicht Teil der ersten Krankenversicherung 1883?</h3>
+          <div class="quiz-options">
+            <label>
+              <input type="radio" name="frage5" value="a"> Kostenfreie ärztliche Behandlung
+            </label>
+            <label>
+              <input type="radio" name="frage5" value="b"> Medikamente
+            </label>
+            <label>
+              <input type="radio" name="frage5" value="c"> Vollständige Lohnfortzahlung in voller Höhe
+            </label>
+          </div>
+        </div>
+
+        <div class="quiz-controls">
+          <button id="quiz-submit" class="quiz-button">Ergebnis anzeigen</button>
+          <button id="quiz-reset" class="quiz-button quiz-reset hidden">Erneut versuchen</button>
+        </div>
         <div id="quiz-result" class="quiz-result hidden"></div>
       </div>
     </section>

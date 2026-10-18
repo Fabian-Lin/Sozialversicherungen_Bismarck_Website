@@ -474,6 +474,23 @@ dd {
   margin-top: 0.8rem;
 }
 
+/* Markierung für Auswertung */
+.quiz-options label.correct-answer {
+  color: var(--success);
+  font-weight: 700;
+  background: rgba(45, 125, 74, 0.06);
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+}
+
+.quiz-options label.wrong-selection {
+  color: #b00000;
+  font-weight: 700;
+  background: rgba(176, 0, 0, 0.04);
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+}
+
 .quiz-options label {
   display: flex;
   align-items: center;
@@ -496,6 +513,34 @@ dd {
 .quiz-button:hover,
 .quiz-button:focus-visible {
   background: #a66c10;
+}
+
+/* Reset-Button: dezenter Stil */
+.quiz-button.quiz-reset {
+  background: transparent;
+  color: var(--primary-strong);
+  border: 1px solid var(--line);
+  box-shadow: none;
+}
+.quiz-button.quiz-reset:hover,
+.quiz-button.quiz-reset:focus-visible {
+  background: rgba(29,79,122,0.06);
+}
+
+/* Controls layout for quiz buttons */
+.quiz-controls {
+  display: inline-flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .quiz-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 .quiz-result {

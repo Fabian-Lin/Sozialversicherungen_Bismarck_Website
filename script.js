@@ -43,20 +43,75 @@ document.getElementById("toggle-era").addEventListener("click", function() {
 });
 
 document.getElementById("quiz-submit").addEventListener("click", function() {
-  const frage1 = document.querySelector("input[name='frage1']:checked");
-  const frage2 = document.querySelector("input[name='frage2']:checked");
   const resultDiv = document.getElementById("quiz-result");
-
+  const questions = document.querySelectorAll('.quiz-question');
   let score = 0;
 
-  if (frage1 && frage1.value === "b") score++;
-  if (frage2 && frage2.value === "b") score++;
+  // Clear previous markings
+  questions.forEach(q => {
+    q.querySelectorAll('label').forEach(l => {
+      l.classList.remove('correct-answer', 'wrong-selection');
+    });
+  });
 
-  resultDiv.classList.remove("hidden");
-  if (score === 2) {
-    resultDiv.innerHTML = `<p>✅ Perfekt! Du hast ${score}/2 Fragen richtig beantwortet.</p>`;
+  questions.forEach(q => {
+    const correct = q.dataset.correct;
+    const firstInput = q.querySelector('input[type="radio"]');
+    if (!firstInput) return;
+    const name = firstInput.name;
+    const selected = q.querySelector(`input[name="${name}"]:checked`);
+    const correctInput = q.querySelector(`input[type="radio"][value="${correct}"]`);
+
+    if (selected) {
+      if (selected.value === correct) {
+        score++;
+        const lbl = selected.closest('label');
+        if (lbl) lbl.classList.add('correct-answer');
+      } else {
+        const lblSel = selected.closest('label');
+        if (lblSel) lblSel.classList.add('wrong-selection');
+        if (correctInput) {
+          const lblCorr = correctInput.closest('label');
+          if (lblCorr) lblCorr.classList.add('correct-answer');
+        }
+      }
+    } else {
+      // Keine Auswahl: zeige die richtige Antwort
+      if (correctInput) {
+        const lblCorr = correctInput.closest('label');
+        if (lblCorr) lblCorr.classList.add('correct-answer');
+      }
+    }
+  });
+
+  const total = questions.length;
+  resultDiv.classList.remove('hidden');
+  if (score === total) {
+    resultDiv.innerHTML = `<p>✅ Perfekt! Du hast ${score}/${total} Fragen richtig beantwortet.</p>`;
   } else {
-    resultDiv.innerHTML = `<p>📚 Fast geschafft! Du hast ${score}/2 Fragen richtig beantwortet.</p>
-                           <p>Tipp: Schau dir die Zeitleiste nochmal an!</p>`;
+    resultDiv.innerHTML = `<p>Du hast ${score}/${total} Fragen richtig beantwortet.</p>
+                           <p>Lies dir die Fragen noch einmal sorgfältig durch.</p>`;
   }
+  // Zeige Reset-Button
+  const resetBtn = document.getElementById('quiz-reset');
+  if (resetBtn) resetBtn.classList.remove('hidden');
+});
+
+// Reset / Try again
+document.getElementById('quiz-reset').addEventListener('click', function() {
+  const questions = document.querySelectorAll('.quiz-question');
+  questions.forEach(q => {
+    q.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+    q.querySelectorAll('label').forEach(l => {
+      l.classList.remove('correct-answer', 'wrong-selection');
+    });
+  });
+  const resultDiv = document.getElementById('quiz-result');
+  resultDiv.classList.add('hidden');
+  resultDiv.innerHTML = '';
+  const resetBtn = document.getElementById('quiz-reset');
+  if (resetBtn) resetBtn.classList.add('hidden');
+  // Bring focus back to first question
+  const firstInput = document.querySelector('.quiz-question input[type="radio"]');
+  if (firstInput) firstInput.focus();
 });
