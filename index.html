@@ -31,148 +31,59 @@
 
   <main>
     <section id="interaktive-zeitleiste" class="timeline-section">
-      <h2>Die soziale Frage und Bismarcks Antwort – eine interaktive Zeitleiste</h2>
-      <p>Klicke auf die Ereignisse, um mehr zu erfahren.</p>
+      <h2>Zeitalter der Sozialversicherungen</h2>
+      <p>Die wichtigsten Ereignisse von der sozialen Frage bis heute stehen auf einer kurzen zeitlichen Linie. Die Sozialversicherungen Bismarcks stehen im Mittelpunkt, andere Entwicklungen wirken im Hintergrund.</p>
 
-      <div class="timeline">
-        <!-- Ereignis 1 -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>1878: Sozialistengesetz</h3>
-            <p>Das Sozialistengesetz verbietet sozialdemokratische Vereine und Versammlungen. Gleichzeitig markiert es den Beginn von Bismarcks "Zuckerbrot-und-Peitsche"-Strategie.</p>
-            <button class="timeline-button" onclick="toggleDetails(this)">Mehr erfahren</button>
-            <div class="timeline-details hidden">
-              <p>Nach zwei Attentaten auf Kaiser Wilhelm I. nutzte Bismarck die Angst vor der Sozialdemokratie, um das Gesetz durchzusetzen. Es scheiterte jedoch in seinem Hauptziel: die SPD wurde stärker.</p>
-              
-            </div>
-          </div>
-        </div>
-
-        <!-- Ereignis 2 -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>1881: Kaiserliche Botschaft</h3>
-            <p>Bismarck kündigt im Reichstag die Einführung von Sozialversicherungen an.</p>
-            <button class="timeline-button" onclick="toggleDetails(this)">Mehr erfahren</button>
-            <div class="timeline-details hidden">
-              <blockquote>
-                "Die Heilung der sozialen Schäden kann nicht ausschließlich im Wege der Repression sozialdemokratischer Ausschreitungen gesucht werden, sondern nur gefunden werden in der positiven Förderung des Wohles der Arbeiter."
-              </blockquote>
-              
-            </div>
-          </div>
+      <div class="timeline-static" aria-label="Statische Zeitleiste des Zeitalters">
+        <div class="timeline-static-line"></div>
+        <div class="timeline-static-items">
+          <button class="timeline-static-item is-active" type="button" data-target="jahr-1878">
+            <span class="timeline-year">1878</span>
+            <h3>Sozialistengesetz</h3>
+            <p>Repression</p>
+          </button>
+          <button class="timeline-static-item" type="button" data-target="jahr-1881">
+            <span class="timeline-year">1881</span>
+            <h3>Kaiserliche Botschaft</h3>
+            <p>Fürsorge</p>
+          </button>
+          <button class="timeline-static-item" type="button" data-target="jahr-1883">
+            <span class="timeline-year">1883</span>
+            <h3>Krankenversicherung</h3>
+            <p>Arzt &amp; Hilfe</p>
+          </button>
+          <button class="timeline-static-item" type="button" data-target="jahr-1884">
+            <span class="timeline-year">1884</span>
+            <h3>Unfallversicherung</h3>
+            <p>Arbeitsschutz</p>
+          </button>
+          <button class="timeline-static-item" type="button" data-target="jahr-1889">
+            <span class="timeline-year">1889</span>
+            <h3>Altersrente</h3>
+            <p>Alter &amp; Invalidität</p>
+          </button>
+          <button class="timeline-static-item" type="button" data-target="jahr-1890">
+            <span class="timeline-year">1890</span>
+            <h3>Ende einer Ära</h3>
+            <p>Wende</p>
+          </button>
         </div>
       </div>
-    </section>
 
-    <section id="zeit">
-      <h2>Der Weg dorthin</h2>
-      <p>Klicke auf ein Ereignis, um mehr zu lesen.</p>
-      <ul class="tl">
-        
-      <li>
-        <details>
-          <summary>
-            <b>1878</b>
-            <span>Sozialistengesetz</span>
-          </summary>
-
-          <div class="details-content">
-            <p>
-              Das Sozialistengesetz von 1878 war ein Ausnahmegesetz, mit dem
-              Bismarck die Sozialdemokratie bekämpfen wollte. Nach zwei
-              gescheiterten Attentaten auf Kaiser Wilhelm I. im Jahr 1878
-              machte er die Sozialistische Arbeiterpartei dafür verantwortlich,
-              obwohl es keine Beweise gab. Im Oktober 1878 beschloss der
-              Reichstag das „Gesetz gegen die gemeingefährlichen Bestrebungen
-              der Sozialdemokratie“. Es verbot sozialdemokratische Vereine,
-              Versammlungen, Druckschriften und Gewerkschaften, und führende
-              Mitglieder konnten aus ihren Wohnorten ausgewiesen werden.
-              Nur die Teilnahme an Reichstagswahlen blieb erlaubt.
-            </p>
-
-            <p>
-              Sein Ziel erreichte das Gesetz nicht: Die Partei arbeitete
-              im Untergrund weiter, und die Verfolgung stärkte ihren
-              Zusammenhalt, sodass sie bei Wahlen sogar dreimal so viele
-              Stimmen gewann. Bismarck setzte deshalb zusätzlich auf
-              „Zuckerbrot und Peitsche“. Neben der Unterdrückung (Peitsche)
-              sollte die Sozialversicherung (Zuckerbrot) die Arbeiter an
-              den Staat binden und vom Sozialismus abbringen. Das
-              Sozialistengesetz lief 1890 aus.
-            </p>
-
-            
-          </div>
-        </details>
-      </li>
-
-        <li>
-          <details>
-            <summary><b>1881</b>Kaiserliche Botschaft</summary>
-            <p>Im Herbst 1881 arbeitete Bismarck ein sozialpolitisches Programm aus, das Kaiser Wilhelm I. 
-              Im Reichstag vortragen sollte. Der Kaiser weigerte sich, weil Bismarck zu dieser Zeit erwog, 
-              das 1878 erlassene Sozialistengesetz wieder aufzuheben. Deshalb hielt Bismarck die Rede am 17. November 1881 selbst. 
-              Er machte darin deutlich, dass man die sozialen Missstände nicht allein durch Verbote und Verfolgung der Sozialdemokraten beheben könne, 
-              sondern dass der Staat auch aktiv das Wohl der Arbeiter fördern müsse. Sein Konzept sah drei Arten von Sozialversicherung vor, 
-              dazu das Prinzip der Selbstverwaltung. Ein Gesetz war die Botschaft noch nicht, sie bildete aber die Grundlage für die Krankenversicherung (1883), 
-              die Unfallversicherung (1884) und die Invaliditäts- und Altersversicherung (1889).  
-            </p>
-            <blockquote class="zitat">
-              „Die Ziele, welche der kaiserlichen Politik vorschweben, sind durch die Kaiserliche Botschaft gekennzeichnet. 
-              Es handelt sich nun aber um die Wege, auf welchen sie zu erreichen sind, und die Wahl dieser Wege ist gleich wichtig wie die Festlegung des Zieles überhaupt, 
-              denn jeder Weg kann ein richtiger Weg sein, er kann auch ein Irrweg sein. Ich muß sagen: 
-              Ich selbst bin meiner Überzeugung über die Wahl der Wege - über die Ziele bin ich mir ganz klar - 
-              aber der Wahl der Wege bin ich so unbedingt sicher nicht, daß ich Ihnen heute mit Bestimmtheit amtliche Andeutungen über das machen könnte, 
-              was ich hoffe etwa im Monat April dem Reichstage vorlegen zu können auf diesem Gebiete.“
-              <br>
-              Rede des Reichskanzlers Otto Fürst von Bismarck im Deutschen Reichstag Januar 1882
-              <p class="quellen">
-              <a href="https://www.quellen-sozialpolitik-kaiserreich.de/fileadmin/user_upload/PDFs_der_Baende/QuellensammlungAbt2Band2Teil1.pdf">
-              Quellensammlung zur Geschichte der deutschen Sozialpolitik 1867 bis 1914 Abt. 2, Band 2, Teil 1, Seite 184f</a>
-              </p>
-              <p class="quellen">
-              <a href="https://www.digitale-sammlungen.de/de/view/bsb00018436?page=50,51&q=Krankenkassenwesens">
-              Verhandlungen des Reichstages. Stenographische Berichte. 66. 1881/82, Seite 51f in: Bayerische Staatsbibliothek über MDZ-Digitale Bibliothek</a>
-              </p>
-            </blockquote>
-            <p class="quellen">
-              Quellen: <a href="https://www.bismarck-biografie.de/politik/bismarcks-sozialgesetzgebung-1881-1890 ">
-              Bismarck-Biografie: Bismarcks Sozialgesetzgebung 1881-1890</a>
-              <a href="https://de.wikipedia.org/wiki/Kaiserliche_Botschaft0 ">Wikipedia: Kaiserliche Botschaft</a>
-                
-            </p>
-          </details>
-        </li>
-        <li>
-          <details>
-            <summary><b>1883–1889</b>Drei Gesetze</summary>
-            <p>Kranken-, Unfall- und Rentenversicherung entstehen nacheinander (siehe unten).</p>
-          </details>
-        </li>
-        <li>
-          <details>
-            <summary><b>1890</b>Ende einer Ära</summary>
-            <p>Das Sozialistengesetz läuft aus, Bismarck tritt zurück.</p>
-          </details>
-        </li>
-        <li>
-          <div class="todo">[Hier eigene Ergänzung: Bild, Quelle oder Karikatur zur Zeit]</div>
-        </li>
-      </ul>
+      <div class="timeline-explanation" id="timeline-explanation" aria-live="polite">
+        <h3>1878: Sozialistengesetz</h3>
+        <p>Das Sozialistengesetz von 1878 war ein Ausnahmegesetz...</p>
+      </div>
     </section>
 
     <section id="saeulen">
-      <h2>Die drei Säulen</h2>
+      <h2>Die drei Versicherungen</h2>
       <div class="tabs" role="tablist" aria-label="Versicherungen">
-        <button role="tab" id="t0" aria-selected="true" aria-controls="p0">Krankenversicherung</button>
-        <button role="tab" id="t1" aria-selected="false" aria-controls="p1">Unfallversicherung</button>
-        <button role="tab" id="t2" aria-selected="false" aria-controls="p2">Rentenversicherung</button>
+        <button role="tab" id="t0" aria-selected="true" aria-controls="p0">1883: Krankenversicherung</button>
+        <button role="tab" id="t1" aria-selected="false" aria-controls="p1">1884: Unfallversicherung</button>
+        <button role="tab" id="t2" aria-selected="false" aria-controls="p2">1889: Rentenversicherung</button>
       </div>
       <div class="pane" role="tabpanel" id="p0" aria-labelledby="t0">
-        <h3>Gesetz von 1883</h3>
         <dl>
           <dt>Wer war versichert? / Betroffene</dt>
           <dd>Arbeiter ohne Familienangehörige (seit 1900 einbezogen), ausgenommen Land- und Forstarbeiter</dd>
@@ -181,7 +92,7 @@
           <dd>Arbeitnehmer zwei Drittel, Arbeitgeber ein Drittel</dd>
 
           <dt>Was bekam man? / Leistungen</dt>
-          <dd>freie ärztliche Behandlung, Medikamente, Krankengeld in höhe der Hälfte des ortsüblichen Tageslohnes bei Erwerbsunfähigkeit</dd>
+          <dd>freie ärztliche Behandlung, Medikamente, Krankengeld in Höhe der Hälfte des ortsüblichen Tageslohns bei Erwerbsunfähigkeit</dd>
 
           <dt>Dauer</dt>
           <dd>Krankengeld für bis zu 13 Wochen</dd>
@@ -198,7 +109,6 @@
 
       </div>
       <div class="pane" role="tabpanel" id="p1" aria-labelledby="t1" hidden>
-        <h3>Gesetz von 1884</h3>
         <dl>
           <dt>Wer war versichert? / Betroffene</dt>
           <dd>Arbeiter in gefährlichen Betrieben</dd>
@@ -222,7 +132,6 @@
         </figcaption>
       </div>
       <div class="pane" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
-        <h3>Gesetz von 1889</h3>
         <dl>
           <dt>Wer war versichert? / Betroffene</dt>
           <dd>Arbeiter und Angestellte bis 2000 Mark Verdienst jährlich, Familienangehörige nicht mit einbezogen</dd>
@@ -248,8 +157,6 @@
     <section id="motive">
       <h2>Warum tat Bismarck das?</h2>
       <div class="motive-grid">
-        
-
         <figure class="motive-figure">
           <div class="motive-title">Karikatur von Bismarck mit Peitsche und dem deutschen Michel in der Prager Zeitschrift Humoristické listy (1878)</div>
           <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Karikatur_Bismarck_und_Michel_%281878%29.png" alt="Karikatur: Bismarck und Michel (1878)" loading="lazy">
@@ -258,14 +165,14 @@
           </figcaption>
         </figure>
         <div class="motive-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum arcu gravida sollicitudin nullam viverra blandit facilisi nam donec arcu magnis id. Lobortis cras lobortis vitae eros dictumst arcu magnis mauris turpis ligula ante pulvinar. Odio aliquam faucibus vestibulum imperdiet fermentum laoreet vitae faucibus per class donec euismod.
+          Bismarck wollte die soziale Frage nicht nur unterdrücken, sondern auch kontrollieren. Die Sozialdemokratie war für ihn ein politisches Risiko, doch zugleich erkannte er, dass soziale Proteste ohne Gegenmaßnahmen weiter wachsen würden. Die Sozialversicherung war deshalb ein Mittel, um Arbeiter an den Staat zu binden, politische Unruhe zu verringern und zugleich das Selbstverständnis des modernen Sozialstaats zu stärken.
         </div>
       </div>
     </section>
 
     <section id="bewertung">
       <h2>Erfolg oder Kalkül?</h2>
-      <div class="todo">[Hier eigene Ergänzung: Bewertung, Folgen für später, evtl. kleines Quiz zum Selbsttest]</div>
+      <p>Die Sozialversicherung war zugleich ein Instrument der politischen Sicherung und eine echte Reform. Sicherlich war Bismarck motiviert von staatlicher Stabilität und sozialer Kontrolle; zugleich legte er damit aber die Grundlage für spätere Sozialstaaten. Ob das Ziel vor allem Herrschafts- oder Wohlfahrtslogik war, bleibt umstritten – in der Wirkung waren die Leistungen jedoch dauerhaft und weitreichend.</p>
     </section>
 
     <section id="vergleich" class="comparison-section">
@@ -401,6 +308,7 @@
       <li>Quellensammlung Sozialpolitik: <a href="https://www.quellen-sozialpolitik-kaiserreich.de/fileadmin/user_upload/PDFs_der_Baende/QuellensammlungAbt2Band2Teil1.pdf">QuellensammlungAbt2Band2Teil1.pdf</a></li>
       <li>Miriam Köhler: Übersicht Bismarcks Sozialversicherungen</li>
       <li>Reichsgesetzblätter 1883, 1884, 1889; <a href="https://de.wikisource.org/wiki/Reichsgesetzblatt_(Deutschland)">Wikisource: Reichsgesetzblatt</a></li>
+      <li>Infotexte von Menschen verfasst, Website mit KI-Unterstützung gebaut</li>
     </ul>
   </footer>
 
