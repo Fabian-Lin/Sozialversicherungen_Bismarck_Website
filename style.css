@@ -38,6 +38,7 @@ body {
   background: linear-gradient(180deg, var(--bg) 0%, #f8f5f2 100%);
   color: var(--ink);
   font: 1.04rem/1.7 var(--font-body);
+  text-rendering: optimizeLegibility;
 }
 
 img {
@@ -122,6 +123,11 @@ a:focus-visible {
   grid-template-columns: minmax(0, 1.6fr) minmax(180px, 0.8fr);
   align-items: center;
   gap: 2rem;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(31, 42, 55, 0.06);
+  border-radius: calc(var(--radius) + 8px);
+  padding: 1.5rem 1.5rem 1.25rem;
+  box-shadow: 0 10px 22px rgba(31, 42, 55, 0.04);
 }
 
 .hero-text {
@@ -193,12 +199,20 @@ a:focus-visible {
   padding: 0.7rem 0.55rem 0.5rem;
   border: 1px solid rgba(31, 42, 55, 0.18);
   border-radius: 0.8rem;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.82);
   box-shadow: 0 8px 16px rgba(31, 42, 55, 0.04);
   text-align: center;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.timeline-static-item:hover,
+.timeline-static-item:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(31, 42, 55, 0.34);
+  box-shadow: 0 12px 20px rgba(31, 42, 55, 0.08);
 }
 
 .timeline-static-item::before {
@@ -216,6 +230,7 @@ a:focus-visible {
 
 .timeline-static-item.is-active {
   border-color: rgba(31, 42, 55, 0.5);
+  background: rgba(255, 255, 255, 0.97);
   box-shadow: 0 12px 20px rgba(31, 42, 55, 0.12);
   transform: translateY(-2px);
 }
@@ -324,6 +339,12 @@ details p {
   transition: all 0.2s ease;
 }
 
+.tabs button:hover,
+.tabs button:focus-visible {
+  border-color: rgba(29, 79, 122, 0.35);
+  box-shadow: 0 8px 18px rgba(29, 79, 122, 0.08);
+}
+
 .tabs button[aria-selected="true"] {
   background: var(--primary);
   color: #fff;
@@ -337,6 +358,7 @@ details p {
   border-radius: var(--radius);
   padding: 1.1rem 1.25rem;
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .pane[hidden] {
@@ -543,6 +565,12 @@ dd {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: 0 8px 18px rgba(31, 42, 55, 0.03);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.quiz-question:hover {
+  border-color: rgba(29, 79, 122, 0.2);
+  box-shadow: 0 10px 20px rgba(31, 42, 55, 0.05);
 }
 
 .quiz-options {
@@ -795,6 +823,7 @@ footer {
   padding: 0.5rem;
   text-align: center;
   box-shadow: 0 12px 30px rgba(31,42,55,0.06);
+  overflow: hidden;
 }
 .motive-figure img {
   width: 100%;
@@ -839,10 +868,11 @@ footer {
 .motive-text {
   width: min(980px, 92%);
   margin: 0 auto;
-  background: var(--panel);
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(242, 235, 223, 0.52));
   border: 1px solid var(--line);
   padding: 1.1rem 1.25rem;
   border-radius: 10px;
+  box-shadow: 0 10px 22px rgba(31,42,55,0.04);
 }
 
 .motive-text p {
