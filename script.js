@@ -1,10 +1,3 @@
-function toggleDetails(button) {
-  const details = button.nextElementSibling;
-  if (details) {
-    details.classList.toggle("hidden");
-  }
-}
-
 (function () {
   const tabs = document.querySelectorAll('[role="tab"]');
 
@@ -38,35 +31,6 @@ function toggleDetails(button) {
     });
   });
 })();
-
-const toggleEraButton = document.getElementById("toggle-era");
-if (toggleEraButton) {
-  toggleEraButton.addEventListener("click", function () {
-    const table = document.getElementById("comparison-table");
-    if (!table) return;
-
-    const rows = table.querySelectorAll("tbody tr");
-
-    rows.forEach(row => {
-      const cells = row.querySelectorAll("td");
-      if (cells.length < 3) return;
-
-      if (cells[1].textContent.includes("Fabrikarbeiter")) {
-        cells[1].textContent = "Alle Arbeitnehmer:innen";
-        cells[2].textContent = "Alle Bürger:innen (auch Selbstständige, Rentner)";
-      } else if (cells[1].textContent.includes("Arztbesuche")) {
-        cells[1].textContent = "Vollkostenübernahme, auch für Familienangehörige";
-        cells[2].textContent = "Zuzahlungen, aber weitreichende Leistungen";
-      } else if (cells[1].textContent.includes("70")) {
-        cells[1].textContent = "Ab 67 Jahren, Beitrag: 18,6% des Lohns";
-        cells[2].textContent = "Ab 67 Jahren, Beitrag: 18,6% des Lohns (2026)";
-      } else if (cells[1].textContent.includes("Betriebsunfällen")) {
-        cells[1].textContent = "Alle Unfälle, auch im Privatleben, gesetzlich geregelt";
-        cells[2].textContent = "Alle Unfälle, auch im Privatleben, gesetzlich geregelt";
-      }
-    });
-  });
-}
 
 const timelineItems = document.querySelectorAll('.timeline-static-item');
 const timelineExplanation = document.getElementById('timeline-explanation');
