@@ -603,3 +603,74 @@ footer {
     padding-left: 1rem;
   }
 }
+
+
+/* Inhalt innerhalb des aufklappbaren Elements */
+.details-content {
+  margin: 1rem 0.25rem 0.2rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--line);
+}
+
+/* Lesefreundliche Abstände für den Fließtext */
+.details-content p {
+  margin: 0 0 1rem;
+  max-width: 65ch;
+}
+
+/* Hervorgehobener Quellenbereich */
+.details-content .quellen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+
+  margin-top: 1.2rem;
+  padding: 0.85rem 1rem;
+
+  background: var(--panel-alt);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Kleines Quellenlabel */
+.quellen-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--primary);
+}
+
+/* Link zur Quelle */
+.details-content .quellen a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.details-content .quellen a:hover,
+.details-content .quellen a:focus-visible {
+  color: var(--primary-strong);
+  text-decoration: underline;
+}
+
+/* Etwas weniger Innenabstand auf kleinen Bildschirmen */
+@media (max-width: 480px) {
+  .details-content {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0.75rem;
+  }
+
+  .details-content .quellen {
+    padding: 0.75rem;
+  }
+}
+
