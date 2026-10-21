@@ -941,3 +941,11 @@ main > p,
     padding: 0.75rem;
   }
 }
+
+
+.timeline-explanation .timeline-audio {
+  display: block;
+  width: 100%;
+  max-width: 38rem;
+  margin-top: 1rem;
+}
