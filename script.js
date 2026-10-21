@@ -41,6 +41,10 @@ const timelineContent = {
     html: `
       <p>Das Sozialistengesetz von 1878 war ein Ausnahmegesetz, mit dem Bismarck die Sozialdemokratie bekämpfen wollte. Nach zwei gescheiterten Attentaten auf Kaiser Wilhelm I. im Jahr 1878 machte er die Sozialistische Arbeiterpartei dafür verantwortlich, obwohl es keine Beweise gab. Im Oktober 1878 beschloss der Reichstag das „Gesetz gegen die gemeingefährlichen Bestrebungen der Sozialdemokratie“. Es verbot sozialdemokratische Vereine, Versammlungen, Druckschriften und Gewerkschaften, und führende Mitglieder konnten aus ihren Wohnorten ausgewiesen werden. Nur die Teilnahme an Reichstagswahlen blieb erlaubt.</p>
       <p>Sein Ziel erreichte das Gesetz nicht: Die Partei arbeitete im Untergrund weiter, und die Verfolgung stärkte ihren Zusammenhalt, sodass sie bei Wahlen sogar dreimal so viele Stimmen gewann. Bismarck setzte deshalb zusätzlich auf „Zuckerbrot und Peitsche“. Neben der Unterdrückung (Peitsche) sollte die Sozialversicherung (Zuckerbrot) die Arbeiter an den Staat binden und vom Sozialismus abbringen. Das Sozialistengesetz lief 1890 aus.</p>
+      <audio class="timeline-audio" controls preload="none" aria-label="Audiobeitrag zum Sozialistengesetz">
+        <source src="audios/Sozialistengesetz.mp3" type="audio/mpeg">
+        Dein Browser unterstützt die Audiowiedergabe nicht. <a href="audios/Sozialistengesetz.mp3">Audiobeitrag herunterladen</a>.
+      </audio>
     `
   },
   'jahr-1881': {
